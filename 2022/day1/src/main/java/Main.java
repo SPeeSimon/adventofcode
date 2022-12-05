@@ -7,16 +7,13 @@ import java.util.*;
 class Main {
 
     record Elf(List<Integer> carried) {
-
         void add(String size) {
-            var count = Integer.parseInt(size.trim());
-            carried.add(count);
+            carried.add(Integer.parseInt(size.trim()));
         }
 
         int sum() {
             return carried.stream().mapToInt(Integer::intValue).sum();
         }
-
     }
 
 

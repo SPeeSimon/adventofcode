@@ -18,10 +18,10 @@ public class Main {
 
         List<Character> duplicateInCompartment() {
             return compartment1.chars()
-                        .filter(c -> compartment2.indexOf((char)c) > -1)
-                        .distinct()
-                        .mapToObj(c -> Character.valueOf((char)c))
-                        .toList();
+                               .filter(c -> compartment2.indexOf((char)c) > -1)
+                               .distinct()
+                               .mapToObj(c -> Character.valueOf((char)c))
+                               .toList();
         }
 
         boolean carries(char c) {
@@ -30,8 +30,8 @@ public class Main {
 
         int sumPriorities() {
             return duplicateInCompartment().stream()
-                                    .mapToInt(c -> priority((char)c))
-                                    .sum();
+                                           .mapToInt(c -> priority((char)c))
+                                           .sum();
         }
 
         IntStream allItems() {
@@ -72,8 +72,8 @@ public class Main {
         }
 
         int sum = groups.stream()
-                .mapToInt(g -> priority(g.badge()))
-                .sum();
+                        .mapToInt(g -> priority(g.badge()))
+                        .sum();
         System.out.println("Total: " + sum);
     }
 

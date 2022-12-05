@@ -38,6 +38,10 @@ public class Main {
                             .filter(elf2::hasSection)
                             .count();
         }
+
+        boolean hasOverlappingSections() {
+            return overlappingSections() > 0;
+        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -52,9 +56,9 @@ public class Main {
         //         """.lines().toList();
 
         long count = input.stream()
-            .map(ElfPair::fromInput)
-            .filter(e -> e.overlappingSections() > 0)
-            .count();
-        System.out.println("total: " + count);
+                          .map(ElfPair::fromInput)
+                          .filter(ElfPair::hasOverlappingSections)
+                          .count();
+        System.out.printf("total: %d\n", count);
     }
 }

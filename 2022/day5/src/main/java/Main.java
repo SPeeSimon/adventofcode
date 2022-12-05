@@ -11,12 +11,11 @@ import java.util.stream.Stream;
 public class Main {
     record Ship(List<CargoStack> cargo) {
         public static Ship fromInput(String line) {
-            var ship = new Ship(new ArrayList<>());
-
-            Stream.of(line.split(" "))
-                    .filter(s -> !s.isEmpty())
-                    .mapToInt(Integer::valueOf)
-                    .forEach(i -> ship.cargo.add(new CargoStack(i, new ArrayDeque<>())));
+            var ship = new Ship(Stream.of(line.split(" "))
+                                      .filter(s -> !s.isEmpty())
+                                      .mapToInt(Integer::valueOf)
+                                      .mapToObj(i -> new CargoStack(i, new ArrayDeque<>()))
+                                      .toList());
             return ship;
         }
 

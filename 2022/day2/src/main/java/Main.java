@@ -98,18 +98,16 @@ public class Main {
 
         Hand yourHand() {
             return Stream.of(Hand.values())
-                    .filter(h -> h.against(opponent) == outcome)
-                    .findFirst()
-                    .get();
+                         .filter(h -> h.against(opponent) == outcome)
+                         .findFirst()
+                         .get();
         }
     }
 
     public static void main(String[] args) throws IOException {
-       
         var games = Files.lines(Paths.get("2022/day2/src/main/resources/input.txt"))
-                .map(Game::of)
-                .toList();
-
+                         .map(Game::of)
+                         .toList();
         games.forEach(g -> System.out.printf(" - %s vs %s = %s (%d)\n", g.opponent, g.yourHand(), g.outcome(), g.score()));
         System.out.printf("games: %d with score %d\n", games.size(), games.stream().mapToInt(Game::score).sum());
     }
