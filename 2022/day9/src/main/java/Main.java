@@ -1,7 +1,6 @@
 package main.java;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -101,8 +100,8 @@ public class Main {
             process = process.flatMap(knot::follow);
         }
         
-        printCurrentArray();
-        System.out.println("\nTail visited: " + process.distinct().count());
+        // printCurrentArray();
+        System.out.println("Tail visited: " + process.distinct().count());
     }
 
     static Stream<Point> actionToPosition(Action a) {
@@ -127,50 +126,4 @@ public class Main {
         }
         System.out.println("---------------------------------------------------");
     }
-
-
-
-    private static void follow(Knot knot, Point head, Direction direction) {
-        int diffX = head.x - knot.position.x;
-        int diffY = head.y - knot.position.y;
-        int distanceX = Math.abs(diffX);
-        int distanceY = Math.abs(diffY);
-
-        if (distanceX < 2 && distanceY < 2) {
-            return;
-        }
-
-
-        
-        switch (distanceX + distanceY) {
-            case 3:
-                if (distanceX > distanceY) {
-                    knot.position.translate(diffX / 2, diffY);
-                } else if (distanceY > distanceX) {
-                    knot.position.translate(diffX, diffY / 2);
-                }
-                break;
-            case 2: 
-                if (distanceX > 1) {
-                    knot.position.translate(diffX / 2, 0);
-                } else if (distanceY > 1) {
-                    knot.position.translate(0, diffY / 2);
-                }
-                break;
-            case 1: // fallthrough
-            case 0:
-                break;
-            default:
-                if (distanceX > distanceY) {
-                    knot.position.translate(diffX / 2, diffY);
-                } else if (distanceY > distanceX) {
-                    knot.position.translate(diffX, diffY / 2);
-                } else if (distanceX == distanceY) {
-                    direction.move(knot.position);
-                    knot.position.translate(diffX / 2, diffY / 2);
-                }
-        }
-        // knot.save();
-    }
-
 }
