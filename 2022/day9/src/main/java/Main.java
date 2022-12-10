@@ -69,26 +69,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         var input = Files.lines(Paths.get("2022/day9/src/main/resources/input.txt"));
-        // var input = """
-        //     R 4
-        //     U 4
-        //     L 3
-        //     D 1
-        //     R 4
-        //     D 1
-        //     L 5
-        //     R 2
-        //         """.lines();
-        // var input = """
-        //     R 5
-        //     U 8
-        //     L 8
-        //     D 3
-        //     R 17
-        //     D 10
-        //     L 25
-        //     U 20
-        //     """.lines();
+        // var input = Files.lines(Paths.get("2022/day9/src/main/resources/test1.txt"));
+        // var input = Files.lines(Paths.get("2022/day9/src/main/resources/test2.txt"));
 
         for (int i = 1; i <= ROPE_COUNT; i++) {
             knots.add(new Knot(i, new Point(HeadPoint.position)));
