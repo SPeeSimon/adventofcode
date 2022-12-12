@@ -93,8 +93,8 @@ public class Main {
                                 .reduce(new char[0][], (v,r) -> add(v, r), (a,b) -> a);
         final Point start = getPoint('S', grid);
         final Point end = getPoint('E', grid);
-        grid[start.x][start.y] = 'a'-1;
-        grid[end.x][end.y] = 'z'+1;
+        grid[start.x][start.y] = 'a';
+        grid[end.x][end.y] = 'z';
         Grid<Integer> grid2 = new Grid<>(grid, Integer.MAX_VALUE);
 
         System.out.printf("grid: %dx%d  (%d)\n", grid2.width, grid2.heigth, grid2.width*grid2.heigth);
@@ -121,10 +121,10 @@ public class Main {
 
 
     static void setStartingPoints(Point start, Grid<Integer> grid) {
-        grid.point(start.x, start.y).data = -1;
+        grid.point(start.x, start.y).data = 0;
         grid.forAll((p,data) -> {
             if (data.height == 'a') {
-                data.data = -1;
+                data.data = 0;
             }
         });
     }
