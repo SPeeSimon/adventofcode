@@ -180,7 +180,7 @@ QQQJA 483";
 
 
 #[test]
-fn part() {
+fn part2() {
     let input = fs::read_to_string("src/input.txt").unwrap();
     println!("total winnings: \x1b[32m{}\x1b[0m", parse_card2(input.as_str()));
     // > 250146490
