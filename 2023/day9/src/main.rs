@@ -14,7 +14,7 @@ fn calc(input: &str) -> (i64, i64) {
         calc_stack.push(history);
         
         while !calc_stack.last().unwrap().iter().all(|d| *d == 0) {
-            let diff = calc_stack.last().unwrap().windows(2).fold(Vec::new(), |mut acc, e| {acc.push(e[1] - e[0]); acc});
+            let diff = calc_stack.last().unwrap().windows(2).map(|e| e[1]-e[0]).collect();
             calc_stack.push(diff);
         }
 
