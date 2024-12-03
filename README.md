@@ -73,4 +73,6 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | Challenge                                                         | part 1 | part 2 |
 |-------------------------------------------------------------------|--------|--------|
 | [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)  | ✓      | ✓      |
-| [Future](https://adventofcode.com/2024/day/2)                     | x      | x      |
+| [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)   | ✓      | ✓      |
+| [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)        | ✓      | ✓      |
+| [Future](https://adventofcode.com/2024/day/4)                     | x      | x      |
