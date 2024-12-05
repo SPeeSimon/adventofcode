@@ -101,7 +101,7 @@ fn count_incorrect_ordering(input: Lines, page_ordering_rules: HashMap<i32, Vec<
 
 
 #[cfg(test)]
-pub mod day3_tests {
+pub mod day5_tests {
     use super::*;
 
 #[test]

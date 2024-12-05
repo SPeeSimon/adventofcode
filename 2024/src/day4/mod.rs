@@ -205,7 +205,7 @@ fn count_matches_mas(grid: &Grid) -> usize {
 
 
 #[cfg(test)]
-pub mod day3_tests {
+pub mod day4_tests {
     use super::*;
 
 #[test]
