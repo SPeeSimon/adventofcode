@@ -51,39 +51,25 @@ impl FromStr for Equation {
 }
 
 
-fn create_equations(input: &str) -> Vec<Equation> {
+fn create_equations(input: &str) -> impl Iterator<Item = Equation> + use<'_> {
     input.lines()
-        .map(|line| Equation::from_str(line).unwrap())
-        .collect()
+         .map(|line| Equation::from_str(line).unwrap())
 }
 
 
-fn calc(cur: &i64, prev: Vec<i64>) -> Vec<i64> {
-    prev.iter().flat_map(|s| [Operation::ADD.apply(s, cur), Operation::MULTIPLY.apply(s, cur)]).collect()
+fn calc(cur: &i64, prev_totals: Vec<i64>, operations: &[Operation]) -> Vec<i64> {
+    operations.iter()
+              .flat_map(|o| prev_totals.iter()
+                                                   .map(|prev_sum| o.apply(prev_sum, cur)))
+              .collect()
 }
 
 
-fn calc3(cur: &i64, prev: Vec<i64>) -> Vec<i64> {
-    prev.iter().flat_map(|s| [Operation::ADD, Operation::MULTIPLY, Operation::CONCATENATE].map(|o| o.apply(s, cur))).collect()
-}
-
-
-fn find_matches(equations: &Vec<Equation>) -> Vec<&Equation> { 
-    let mut result = Vec::new();
-    for eq in equations.iter() {
-        if is_match(eq) {
-            result.push(eq);
-        }
-    }
-    result
-}
-
-
-fn is_match(eq: &Equation) -> bool {
+fn is_match(eq: &Equation, operations: &[Operation]) -> bool {
     let mut loop_operators = eq.operators.iter();
     let mut sum = vec![*loop_operators.next().unwrap()]; // first one requires no calculation
     for x in loop_operators {
-        let mut new_sum = calc(x, sum);
+        let mut new_sum = calc(x, sum, operations);
         new_sum.sort();
         new_sum.dedup();
         new_sum.retain(|&x| x <= eq.test_value);
@@ -92,19 +78,6 @@ fn is_match(eq: &Equation) -> bool {
     sum.contains(&eq.test_value)
 }
 
-
-fn is_match3(eq: &Equation) -> bool {
-    let mut loop_operators = eq.operators.iter();
-    let mut sum = vec![*loop_operators.next().unwrap()]; // first one requires no calculation
-    for x in loop_operators {
-        let mut new_sum = calc3(x, sum);
-        new_sum.sort();
-        new_sum.dedup();
-        new_sum.retain(|&x| x <= eq.test_value);
-        sum = new_sum;
-    }
-    sum.contains(&eq.test_value)
-}
 
 
 
@@ -125,10 +98,9 @@ fn example1() {
 21037: 9 7 18 13
 292: 11 6 16 20";
 
-    let equations = create_equations(input);
-    let total: i64 = find_matches(&equations).iter()
-                                            .map(|eq| eq.test_value)
-                                            .sum();
+    let total: i64 = create_equations(&input).filter(|eq| is_match(eq, &[Operation::ADD, Operation::MULTIPLY]))
+                                             .map(|eq| eq.test_value)
+                                             .sum();
     assert_eq!(3749, total);
 }
 
@@ -138,8 +110,7 @@ fn example1() {
 fn part1() {
     let input = fs::read_to_string("src/day7/input.txt").unwrap();
     let total: i64 = 
-    create_equations(&input).iter()
-                            .filter(|eq| is_match(eq))
+    create_equations(&input).filter(|eq| is_match(eq, &[Operation::ADD, Operation::MULTIPLY]))
                             .map(|eq| eq.test_value)
                             .sum();
     assert_ne!(303766878186, total); // too low
@@ -161,8 +132,7 @@ fn example2() {
 292: 11 6 16 20";
 
     let total: i64 = 
-    create_equations(&input).iter()
-                            .filter(|eq| is_match3(eq))
+    create_equations(&input).filter(|eq| is_match(eq, &[Operation::ADD, Operation::MULTIPLY, Operation::CONCATENATE]))
                             .map(|eq| eq.test_value)
                             .sum();
     assert_eq!(11387, total);
@@ -173,8 +143,7 @@ fn example2() {
 fn part2() {
     let input = fs::read_to_string("src/day7/input.txt").unwrap();
     let total: i64 = 
-    create_equations(&input).iter()
-                            .filter(|eq| is_match3(eq))
+    create_equations(&input).filter(|eq| is_match(eq, &[Operation::ADD, Operation::MULTIPLY, Operation::CONCATENATE]))
                             .map(|eq| eq.test_value)
                             .sum();
     assert_eq!(337041851384440, total);
