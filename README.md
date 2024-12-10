@@ -81,4 +81,5 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)         | ✓      | ✓      |
 | [Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8) | ✓      | ✓      |
 | [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)       | ✓      | ✓      |
-| [Future](https://adventofcode.com/2024/day/10)                      | x      | x      |
+| [Day 10: Hoof It](https://adventofcode.com/2024/day/10)             | ✓      | ✓      |
+| [Future](https://adventofcode.com/2024/day/11)                      | x      | x      |

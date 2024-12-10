@@ -23,11 +23,22 @@ impl FromStr for Grid<char> {
             width: input.lines().next().unwrap_or_default().len(),
         })
     }
+
 }
 
 
 
 impl<T> Grid<T> {
+
+    pub fn find_all_positions<'a, P>(&'a self, predicate: P) -> Vec<Position>
+        where P: Fn(&T) -> bool
+    {
+        self.grid.iter().enumerate()
+                 .filter(|(_idx, val)| predicate(val))
+                 .map(|(idx, _)| self.position_of(idx))
+                 .collect()
+    }
+
 
     pub fn distances(&self, position: &Position) -> (usize, usize, usize, usize) {
         (

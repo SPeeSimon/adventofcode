@@ -52,14 +52,14 @@ impl Position {
         self.y * grid.width + self.x
    }
 
-   pub fn move_to(&self, direction: &Move) -> Position {
-        Position {
-            x: direction.move_x(self.x, 1).unwrap(),
-            y: direction.move_y(self.y, 1).unwrap(),
-        }
+   pub fn move_to(&self, direction: &Move) -> Option<Position> {
+        Some(Position {
+            x: direction.move_x(self.x, 1)?,
+            y: direction.move_y(self.y, 1)?,
+        })
    }
 
-   pub fn sides(&self) -> [Position;4] {
+   pub fn sides(&self) -> [Option<Position>;4] {
         [
             self.move_to(&Move::TOP),
             self.move_to(&Move::RIGHT),
