@@ -74,21 +74,17 @@ fn count_stones_on_blink_with_cache(blink: i32, line_of_stones: Vec<i64>, cache:
             continue;
         }
 
-        if stone == 0 {
-            let total_of_entry = count_stones_on_blink_with_cache(blink - 1, vec![1], cache);
-            cache.cache_entry(blink, stone, total_of_entry);
-            total += total_of_entry;
-        }
-        else if stone == 1 {
-            let total_of_entry = count_stones_on_blink_with_cache(blink - 1, vec![2024], cache);
-            cache.cache_entry(blink, stone, total_of_entry);
-            total += total_of_entry;
-        }
-        else {
-            let total_of_entry = count_stones_on_blink_with_cache(blink - 1, split_on_blink(stone), cache);
-            cache.cache_entry(blink, stone, total_of_entry);
-            total += total_of_entry;
-        }
+        let total_of_entry = if stone == 0 {
+                                    count_stones_on_blink_with_cache(blink - 1, vec![1], cache)
+                                  }
+                                  else if stone == 1 {
+                                    count_stones_on_blink_with_cache(blink - 1, vec![2024], cache)
+                                  }
+                                  else {
+                                    count_stones_on_blink_with_cache(blink - 1, split_on_blink(stone), cache)
+                                  };
+        cache.cache_entry(blink, stone, total_of_entry);
+        total += total_of_entry;
     }
 
     total
