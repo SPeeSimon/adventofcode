@@ -83,4 +83,5 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)       | ✓      | ✓      |
 | [Day 10: Hoof It](https://adventofcode.com/2024/day/10)             | ✓      | ✓      |
 | [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)   | ✓      | ✓      |
-| [Future](https://adventofcode.com/2024/day/12)                      | x      | x      |
+| [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)       | ✓      | ✓      |
+| [Future](https://adventofcode.com/2024/day/13)                      | x      | x      |

@@ -122,6 +122,11 @@ impl<T> Grid<T> {
         }
     }
 
+    pub fn iter_lr_down(&self) -> impl Iterator<Item = Position> + use<'_, T> {
+        (0..self.height)
+            .flat_map(|x| (0..self.width).map(move |y| Position{x: x, y: y}))
+    }
+
     // fn walk_to(&self, position: &Position, direction: &Move) -> impl Iterator<Item = (&Position, Option<&T>)> {
     //     self.positions_to(position, direction, self.max_to(position, direction))
     //         .iter()
