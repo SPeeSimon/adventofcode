@@ -84,4 +84,5 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | [Day 10: Hoof It](https://adventofcode.com/2024/day/10)             | ✓      | ✓      |
 | [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)   | ✓      | ✓      |
 | [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)       | ✓      | ✓      |
-| [Future](https://adventofcode.com/2024/day/13)                      | x      | x      |
+| [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)    | ✓      | x      |
+| [Future](https://adventofcode.com/2024/day/14)                      | x      | x      |

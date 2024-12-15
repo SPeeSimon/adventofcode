@@ -2,7 +2,7 @@ use std::{fmt::write, path::Display};
 use super::Move;
 
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[derive(Debug, Default, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct Position {
     pub x: usize,
     pub y: usize,
