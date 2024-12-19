@@ -85,6 +85,7 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)   | ✓      | ✓      |
 | [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)       | ✓      | ✓      |
 | [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)    | ✓      | x      |
-| [Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)    | x      | x      |
-| [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)      | x      | x      |
+| [Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)    | ✓      | ✓      |
+| [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)      | ✓      | x      |
+| [Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)       | ✓      | x      |
 | [Future](https://adventofcode.com/2024/day/16)                      | x      | x      |
