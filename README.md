@@ -70,22 +70,23 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 
 # 2024
 
-| Challenge                                                           | part 1 | part 2 |
-|---------------------------------------------------------------------|--------|--------|
-| [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)    | ✓      | ✓      |
-| [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)     | ✓      | ✓      |
-| [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)          | ✓      | ✓      |
-| [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)          | ✓      | ✓      |
-| [Day 5: Print Queue](https://adventofcode.com/2024/day/5)           | ✓      | ✓      |
-| [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)       | ✓      | x      |
-| [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)         | ✓      | ✓      |
-| [Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8) | ✓      | ✓      |
-| [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)       | ✓      | ✓      |
-| [Day 10: Hoof It](https://adventofcode.com/2024/day/10)             | ✓      | ✓      |
-| [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)   | ✓      | ✓      |
-| [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)       | ✓      | ✓      |
-| [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)    | ✓      | x      |
-| [Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)    | ✓      | ✓      |
-| [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)      | ✓      | x      |
-| [Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)       | ✓      | x      |
-| [Future](https://adventofcode.com/2024/day/16)                      | x      | x      |
+| Challenge                                                              | part 1 | part 2 |
+|------------------------------------------------------------------------|--------|--------|
+| [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)       | ✓      | ✓      |
+| [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)        | ✓      | ✓      |
+| [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)             | ✓      | ✓      |
+| [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)             | ✓      | ✓      |
+| [Day 5: Print Queue](https://adventofcode.com/2024/day/5)              | ✓      | ✓      |
+| [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)          | ✓      | x      |
+| [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)            | ✓      | ✓      |
+| [Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8)    | ✓      | ✓      |
+| [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)          | ✓      | ✓      |
+| [Day 10: Hoof It](https://adventofcode.com/2024/day/10)                | ✓      | ✓      |
+| [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)      | ✓      | ✓      |
+| [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)          | ✓      | ✓      |
+| [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)       | ✓      | x      |
+| [Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)       | ✓      | ✓      |
+| [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)         | ✓      | x      |
+| [Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)          | ✓      | x      |
+| [Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17) | ✓      | ✓      |
+| [Future](https://adventofcode.com/2024/day/18)                         | x      | x      |
