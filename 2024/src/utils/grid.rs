@@ -1,4 +1,5 @@
 use std::num::ParseIntError;
+use std::ops::Index;
 use std::str::FromStr;
 
 use super::position::Position;
@@ -24,6 +25,15 @@ impl FromStr for Grid<char> {
         })
     }
 
+}
+
+
+impl<T> Index<Position> for Grid<T> {
+    type Output = T;
+
+    fn index(&self, position: Position) -> &Self::Output {
+        &self.grid[position.to_index(self)]
+    }
 }
 
 
