@@ -89,4 +89,32 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)         | ✓      | x      |
 | [Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)          | ✓      | x      |
 | [Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17) | ✓      | ✓      |
-| [Future](https://adventofcode.com/2024/day/18)                         | x      | x      |
+| [Day 18: RAM Run](https://adventofcode.com/2024/day/18)                | x      | x      |
+| [Day 19: Linen Layout](https://adventofcode.com/2024/day/19)           | x      | x      |
+| [Day 20: Race Condition](https://adventofcode.com/2024/day/20)         | x      | x      |
+| [Day 21: Keypad Conundrum](https://adventofcode.com/2024/day/21)       | x      | x      |
+| [Day 22: Monkey Market](https://adventofcode.com/2024/day/22)          | x      | x      |
+| [Day 23: LAN Party](https://adventofcode.com/2024/day/23)              | x      | x      |
+| [Day 24: Crossed Wires](https://adventofcode.com/2024/day/24)          | x      | x      |
+| [Day 25: Code Chronicle](https://adventofcode.com/2024/day/25)         | x      | x      |
+
+# 2025
+
+| Challenge                                                              | part 1 | part 2 |
+|------------------------------------------------------------------------|--------|--------|
+| [Day 1: Secret Entrance](https://adventofcode.com/2025/day/1)          | ✓      | ✓      |
+| [Day 2: Gift Shop](https://adventofcode.com/2025/day/2)                | ✓      | ✓      |
+| [Day 3: Lobby](https://adventofcode.com/2025/day/3)                    | ✓      | ✓      |
+| [Day 4](https://adventofcode.com/2025/day/4)                          | x      | x      |
+| [Day 5](https://adventofcode.com/2025/day/5)                          | x      | x      |
+| [Day 6](https://adventofcode.com/2025/day/6)                          | x      | x      |
+| [Day 7](https://adventofcode.com/2025/day/7)                          | x      | x      |
+| [Day 8](https://adventofcode.com/2025/day/8)                          | x      | x      |
+| [Day 9](https://adventofcode.com/2025/day/9)                          | x      | x      |
+| [Day 10](https://adventofcode.com/2025/day/10)                          | x      | x      |
+| [Day 11](https://adventofcode.com/2025/day/11)                          | x      | x      |
+| [Day 12](https://adventofcode.com/2025/day/12)                          | x      | x      |
+| [Day 13](https://adventofcode.com/2025/day/13)                          | x      | x      |
+| [Day 14](https://adventofcode.com/2025/day/14)                          | x      | x      |
+| [Day 15](https://adventofcode.com/2025/day/15)                          | x      | x      |
+
