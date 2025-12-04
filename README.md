@@ -105,7 +105,7 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | [Day 1: Secret Entrance](https://adventofcode.com/2025/day/1)          | ✓      | ✓      |
 | [Day 2: Gift Shop](https://adventofcode.com/2025/day/2)                | ✓      | ✓      |
 | [Day 3: Lobby](https://adventofcode.com/2025/day/3)                    | ✓      | ✓      |
-| [Day 4](https://adventofcode.com/2025/day/4)                          | x      | x      |
+| [Day 4: Printing Department](https://adventofcode.com/2025/day/4)      | ✓      | ✓      |
 | [Day 5](https://adventofcode.com/2025/day/5)                          | x      | x      |
 | [Day 6](https://adventofcode.com/2025/day/6)                          | x      | x      |
 | [Day 7](https://adventofcode.com/2025/day/7)                          | x      | x      |
