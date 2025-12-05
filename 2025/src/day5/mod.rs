@@ -22,13 +22,13 @@ impl FromStr for Inventory {
                                                             })
                                                             .map(|(start, end)| RangeInclusive::new(start, end))
                                                             .collect();
-        fresh_ranges.sort_by(|a, b| a.start().cmp(b.start()));
+        fresh_ranges.sort_by_key(|range| *range.start());
 
         let mut available_ids: Vec<i64> = available_section
             .lines()
             .filter_map(|line| line.parse().ok())
             .collect();
-        available_ids.sort_by(|a, b| a.cmp(&b));
+        available_ids.sort();
 
         Ok(Inventory {
             fresh_ranges,
@@ -40,17 +40,16 @@ impl FromStr for Inventory {
 
 fn check_ingredients(inventory: &Inventory) -> usize {
     let mut fresh_count = 0;
-
-    for id in inventory.available_ids.iter() {
-        let mut is_fresh = false;
-        for range in inventory.fresh_ranges.iter() {
-            if range.contains(&id) {
-                is_fresh = true;
+    let mut idx = 0;
+    for range in inventory.fresh_ranges.iter() {
+        while idx < inventory.available_ids.len() {
+            if inventory.available_ids[idx] > *range.end() {
                 break;
             }
-        }
-        if is_fresh {
-            fresh_count += 1;
+            if range.contains(&inventory.available_ids[idx]) {
+                fresh_count += 1;
+            }
+            idx += 1;
         }
     }
 
@@ -157,6 +156,17 @@ fn part2() {
     assert_ne!(3, total);
     assert_ne!(726, total);
     assert_eq!(354226555270043, total);
+}
+
+
+#[test]
+fn part3() {
+    let input = fs::read_to_string("src/day5/aoc-2025-day-5-challenge-1.txt").unwrap();
+    let inventory: Inventory = input.parse().unwrap();
+    let total = check_ingredients(&inventory);
+    assert_eq!(54850, total);
+    let total = fresh_ingredients(&inventory);
+    assert_eq!(498078480804022, total);
 }
 
 
