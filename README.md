@@ -107,7 +107,7 @@ This repository is my result for the [Advent of Code](https://adventofcode.com/)
 | [Day 3: Lobby](https://adventofcode.com/2025/day/3)                    | ✓      | ✓      |
 | [Day 4: Printing Department](https://adventofcode.com/2025/day/4)      | ✓      | ✓      |
 | [Day 5: Cafeteria](https://adventofcode.com/2025/day/5)                | ✓      | ✓      |
-| [Day 6](https://adventofcode.com/2025/day/6)                          | x      | x      |
+| [Day 6: Trash Compactor](https://adventofcode.com/2025/day/6)          | ✓      | ✓      |
 | [Day 7](https://adventofcode.com/2025/day/7)                          | x      | x      |
 | [Day 8](https://adventofcode.com/2025/day/8)                          | x      | x      |
 | [Day 9](https://adventofcode.com/2025/day/9)                          | x      | x      |
